@@ -126,6 +126,9 @@
 -define:UNITY_TESTS_FRAMEWORK
 -define:CSHARP_7_OR_LATER
 -define:CSHARP_7_3_OR_NEWER
+-r:"/Applications/Unity/Hub/Editor/6000.0.23f1/PlaybackEngines/iOSSupport/UnityEditor.Apple.Extensions.Common.dll"
+-r:"/Applications/Unity/Hub/Editor/6000.0.23f1/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.Common.dll"
+-r:"/Applications/Unity/Hub/Editor/6000.0.23f1/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.Xcode.dll"
 -r:"/Applications/Unity/Hub/Editor/6000.0.23f1/Unity.app/Contents/Managed/UnityEngine/UnityEditor.AccessibilityModule.dll"
 -r:"/Applications/Unity/Hub/Editor/6000.0.23f1/Unity.app/Contents/Managed/UnityEngine/UnityEditor.AdaptivePerformanceModule.dll"
 -r:"/Applications/Unity/Hub/Editor/6000.0.23f1/Unity.app/Contents/Managed/UnityEngine/UnityEditor.BuildProfileModule.dll"
@@ -374,9 +377,6 @@
 -analyzer:"/Applications/Unity/Hub/Editor/6000.0.23f1/Unity.app/Contents/Tools/Unity.SourceGenerators/Unity.Properties.SourceGenerator.dll"
 -analyzer:"/Applications/Unity/Hub/Editor/6000.0.23f1/Unity.app/Contents/Tools/Unity.SourceGenerators/Unity.SourceGenerators.dll"
 -analyzer:"/Applications/Unity/Hub/Editor/6000.0.23f1/Unity.app/Contents/Tools/Unity.SourceGenerators/Unity.UIToolkit.SourceGenerator.dll"
--analyzer:"Library/PackageCache/com.unity.collab-proxy/Lib/Editor/log4netPlastic.dll"
--analyzer:"Library/PackageCache/com.unity.collab-proxy/Lib/Editor/Unity.Plastic.Antlr3.Runtime.dll"
--analyzer:"Library/PackageCache/com.unity.collab-proxy/Lib/Editor/Unity.Plastic.Newtonsoft.Json.dll"
 "Library/PackageCache/com.unity.inputsystem/Tests/TestFixture/AssemblyInfo.cs"
 "Library/PackageCache/com.unity.inputsystem/Tests/TestFixture/AssetDatabaseUtils.cs"
 "Library/PackageCache/com.unity.inputsystem/Tests/TestFixture/InputTestFixture.cs"

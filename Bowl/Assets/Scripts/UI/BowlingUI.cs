@@ -7,6 +7,10 @@
  *
  * Written by Claude Code on 2026-01-11
  * User prompt: Create physics-based iOS bowling game with swipe controls
+ *
+ * Updated by Claude Code on 2026-01-11
+ * User prompt: Implement formatted score display with frame breakdown
+ * Change: Added UpdateScoreText() method to display formatted scores like "10|20|28 = 58"
  */
 
 using UnityEngine;
@@ -44,6 +48,22 @@ public class BowlingUI : MonoBehaviour
         if (scoreText != null)
         {
             scoreText.text = $"Score: {score}";
+        }
+        else
+        {
+            Debug.LogWarning("BowlingUI: Score text reference is missing!");
+        }
+    }
+
+    /// <summary>
+    /// Updates the score display with formatted text
+    /// </summary>
+    /// <param name="formattedScore">Pre-formatted score string (e.g., "10|20|28 = 58")</param>
+    public void UpdateScoreText(string formattedScore)
+    {
+        if (scoreText != null)
+        {
+            scoreText.text = formattedScore;
         }
         else
         {

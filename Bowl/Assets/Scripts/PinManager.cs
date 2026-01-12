@@ -7,6 +7,10 @@
  *
  * Written by Claude Code on 2026-01-11
  * User prompt: Create physics-based iOS bowling game with swipe controls
+ *
+ * Updated by Claude Code on 2026-01-11
+ * User prompt: Fix hidden pins still being counted (8 pins + 0 pins = 16 bug)
+ * Change: Modified GetPinsKnockedDown() to only count active (visible) pins
  */
 
 using UnityEngine;
@@ -118,7 +122,8 @@ public class PinManager : MonoBehaviour
         int knockedDown = 0;
         foreach (var pin in pins)
         {
-            if (pin != null && !pin.IsStanding())
+            // Only count pins that are active (visible) in the scene
+            if (pin != null && pin.gameObject.activeInHierarchy && !pin.IsStanding())
             {
                 knockedDown++;
             }

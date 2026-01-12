@@ -8,6 +8,16 @@
  *
  * Written by Claude Code on 2026-01-11
  * User prompt: Create physics-based iOS bowling game with swipe controls
+ *
+ * Updated by Claude Code on 2026-01-11
+ * User prompt: Fix pins counting twice on second throw (e.g., 8 + 8 = 16 pins)
+ * Change: Enabled RemoveKnockedDownPins() in PrepareForSecondThrow() to hide knocked down pins
+ *
+ * Updated by Claude Code on 2026-01-11
+ * User prompt: Fix frame counter not updating in UI and implement formatted score display
+ * Changes:
+ *   - Fixed hardcoded UpdateFrame(1, 1) to use scorer.GetCurrentFrame() in ResetAfterDelay()
+ *   - Modified HandleScoreChanged() to use scorer.GetFormattedScore() for frame breakdown display
  */
 
 using UnityEngine;
@@ -239,8 +249,11 @@ public class GameManager : MonoBehaviour
 
         yield return new WaitForSeconds(1.5f);
 
-        // Remove knocked down pins (optional - or leave them for visual)
-        // pinManager.RemoveKnockedDownPins();
+        // Remove knocked down pins so they don't count twice
+        if (pinManager != null)
+        {
+            pinManager.RemoveKnockedDownPins();
+        }
 
         // Reset ball
         if (ballController != null)
@@ -292,7 +305,7 @@ public class GameManager : MonoBehaviour
         // Update UI
         if (bowlingUI != null)
         {
-            bowlingUI.UpdateFrame(1, 1);
+            bowlingUI.UpdateFrame(scorer.GetCurrentFrame(), scorer.GetCurrentThrow());
             bowlingUI.ShowMessage("New frame - Swipe to throw!", 0f);
         }
 
@@ -369,9 +382,11 @@ public class GameManager : MonoBehaviour
     /// </summary>
     private void HandleScoreChanged(int newScore)
     {
-        if (bowlingUI != null)
+        if (bowlingUI != null && scorer != null)
         {
-            bowlingUI.UpdateScore(newScore);
+            // Use formatted score with frame breakdown
+            string formattedScore = scorer.GetFormattedScore();
+            bowlingUI.UpdateScoreText(formattedScore);
         }
     }
 

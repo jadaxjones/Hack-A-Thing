@@ -8,14 +8,6 @@
     "/Users/liammurray/Hack-A-Thing/Bowl/Packages/packages-lock.json"
   ],
   "outputs": {
-    "com.unity.collab-proxy@2.11.2": {
-      "name": "com.unity.collab-proxy",
-      "resolvedPath": "/Users/liammurray/Hack-A-Thing/Bowl/Library/PackageCache/com.unity.collab-proxy",
-      "fingerprint": "1ec4e416a4af080c4db88ec03f1b37b1195b1761",
-      "editorCompatibility": "2021.3.0f1",
-      "version": "2.11.2",
-      "source": "registry"
-    },
     "com.unity.feature.mobile@1.0.0": {
       "name": "com.unity.feature.mobile",
       "resolvedPath": "/Users/liammurray/Hack-A-Thing/Bowl/Library/PackageCache/com.unity.feature.mobile",
@@ -46,14 +38,6 @@
       "editorCompatibility": "2019.4.0a1",
       "version": "1.11.1",
       "source": "registry"
-    },
-    "com.unity.multiplayer.center@1.0.0": {
-      "name": "com.unity.multiplayer.center",
-      "resolvedPath": "/Users/liammurray/Hack-A-Thing/Bowl/Library/PackageCache/com.unity.multiplayer.center",
-      "fingerprint": "b27203cbee4b0eb1910981fa8a1f299c8134b318",
-      "editorCompatibility": "6000.0.0a1",
-      "version": "1.0.0",
-      "source": "builtin"
     },
     "com.unity.render-pipelines.universal@17.0.3": {
       "name": "com.unity.render-pipelines.universal",
