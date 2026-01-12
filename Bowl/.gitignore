@@ -1,0 +1,10 @@
+# Unity generated folders
+Bowl/Library/
+Bowl/Temp/
+Bowl/Obj/
+Bowl/Build/
+Bowl/Builds/
+Bowl/Logs/
+
+# iOS / build outputs
+Bowl/iOS-Build/
